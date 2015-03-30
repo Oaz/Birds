@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A31A5E2-6B70-4AB6-893B-55C042026EC9}</ProjectGuid>
+    <ProjectTypeGuids>{9B831FEF-F496-498F-9FE8-180DA5CB4258};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Birds</RootNamespace>
+    <AssemblyName>Birds</AssemblyName>
+    <StartupObject>Birds.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="MonoGame.Framework.Net">
+      <HintPath>..\MonoGame-3.3\MonoGame.Framework\bin\Linux\AnyCPU\Release\MonoGame.Framework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\MonoGame-3.3\MonoGame.Framework\bin\Linux\AnyCPU\Release\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Lidgren.Network">
+      <HintPath>..\MonoGame-3.3\MonoGame.Framework\bin\Linux\AnyCPU\Release\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK">
+      <HintPath>..\MonoGame-3.3\MonoGame.Framework\bin\Linux\AnyCPU\Release\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="Tao.Sdl">
+      <HintPath>..\MonoGame-3.3\MonoGame.Framework\bin\Linux\AnyCPU\Release\Tao.Sdl.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MonoScratch\Costume.cs" />
+    <Compile Include="MonoScratch\Costumes.cs" />
+    <Compile Include="MonoScratch\Drawable.cs" />
+    <Compile Include="MonoScratch\Events.cs" />
+    <Compile Include="MonoScratch\Sprite.cs" />
+    <Compile Include="MonoScratch\Game.cs" />
+    <Compile Include="MonoScratch\Motion.cs" />
+    <Compile Include="MonoScratch\Control.cs" />
+    <Compile Include="MonoScratch\Sensing.cs" />
+    <Compile Include="MonoScratch\Looks.cs" />
+    <Compile Include="MonoScratch\Event.cs" />
+    <Compile Include="MonoScratch\Variable.cs" />
+    <Compile Include="MonoScratch\Data.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Birds.cs" />
+    <Compile Include="Oiseau.cs" />
+    <Compile Include="Murs.cs" />
+    <Compile Include="PlafondEtSol.cs" />
+    <Compile Include="PiqueMurDroite.cs" />
+    <Compile Include="PiqueMurGauche.cs" />
+    <Compile Include="PiqueBas.cs" />
+    <Compile Include="Balle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Graphics\7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Graphics\8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Graphics\9.png" />
+    <None Include="Content\Graphics\0.png" />
+    <None Include="Content\Graphics\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Graphics\2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Graphics\3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Graphics\4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Graphics\5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Graphics\6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\Miramonte.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="Content\Graphics\" />
+    <Folder Include="MonoScratch\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
